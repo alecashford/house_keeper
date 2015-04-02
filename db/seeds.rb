@@ -1,18 +1,18 @@
 require 'faker'
-new_house = House.create(:house_number => "1783", :street => "Church St.", :city => "Salem",
-			 :state => "Oregon", :zip_code => "97302", :country => "USA")
+new_house = House.create(:house_number => "1999", :street => "Church St.", :city => "Albany",
+			 :state => "Oregon", :zip_code => "97309", :country => "USA")
 new_house.generate_code
 
-User.create(:first_name => "Alec", :last_name => "Ashford", :email => "ashford91@gmail.com",
-			:phone => "4156402665", :password_hash => BCrypt::Password.create("pass"),
+User.create(:first_name => "Alec", :last_name => "A", :email => "a@gmail.com",
+			:phone => "0000000000", :password_hash => BCrypt::Password.create("pass"),
 			:house_id => 1)
-User.create(:first_name => "Noam", :last_name => "KZ", :email => "nkz124@gmail.com",
+User.create(:first_name => "Noam", :last_name => "K", :email => "n124@gmail.com",
 			:phone => "1111111111", :password_hash => BCrypt::Password.create("pass"),
 			:house_id => 1)
-User.create(:first_name => "Phil", :last_name => "Hellmuth", :email => "philliam222@gmail.com",
+User.create(:first_name => "Phil", :last_name => "H", :email => "phil222@gmail.com",
 			:phone => "2222222222", :password_hash => BCrypt::Password.create("pass"),
 			:house_id => 1)
-User.create(:first_name => "Aaron", :last_name => "Ollis", :email => "ollis9358@gmail.com",
+User.create(:first_name => "Aaron", :last_name => "O", :email => "o9358@gmail.com",
 			:phone => "3333333333", :password_hash => BCrypt::Password.create("pass"),
 			:house_id => 1)
 
