@@ -10,6 +10,20 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
+  <script type="text/javascript">
+          window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid = e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments, 0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+          heap.load(<%= heap_env_id %>);
+
+          function heapId() {
+	          email = $("input[name='email']").val()
+	            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+              if (re.test(String(email).toLowerCase())) {
+    	          heap.identify(email.toLowerCase())
+              }
+          }
+
+  </script>
+
   <!-- Optional theme -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
@@ -36,7 +50,7 @@
         </div>
       <% else %>
         <li><a href="/">Sign In</a></li>
-        <li><a href="/signup">Sign Up</a></li>
+        <li><a href="/register_house">Sign Up</a></li>
       <% end %>
   </nav>
   <%= yield %>
@@ -54,6 +68,4 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 </body>
-<footer>Written in javascript and ruby. © <a href="mailto:ashford91@gmail.com">Alexander Ashford</a> 2014
-</footer>
 </html>

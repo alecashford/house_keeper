@@ -120,6 +120,15 @@ helpers do
     :subject => subject,
     :text => text
   end
+
+  def heap_env_id
+    if ENV['DEPLOYMENT_ENVIRONMENT'] == 'development'
+      3464552814
+    else
+      1936440746
+    end
+  end
+
 end
 
 

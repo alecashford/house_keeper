@@ -8,7 +8,7 @@ gem 'factory_girl'
 gem 'faker'
 
 # PostgreSQL driver
-gem 'pg'
+gem 'pg', '~> 0.20'
 
 # Sinatra driver
 gem 'sinatra'
@@ -24,7 +24,7 @@ gem 'rake'
 gem 'bcrypt-ruby'
 
 # gem 'rest-client'
-gem 'rest_client'
+gem 'rest-client'
 
 gem 'shotgun'
 

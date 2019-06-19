@@ -121,9 +121,9 @@
     <h5>Please sign in, or <a href="/register_house">register your house</a>!</h5>
     <br>
     <form action="/sessions" method="post">
-      <input type="text" name="email" placeholder="Email">
-      <input type="password" name="password" placeholder="Password">
-      <input type="submit" value="login" class="button">
+      <input type="text" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="submit" value="login" class="button" onclick="heapId()">
     </form>
 <% end %>
 </div>
